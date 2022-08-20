@@ -1,0 +1,14 @@
+.wrapper1 {
+    width: 720px;
+}
+.wrapper {
+    margin: 10px 16px 12px 8px;
+}
+.text1 {
+    font-family: 'Arial';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 20px;
+    color: #000000;
+}
