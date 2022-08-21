@@ -1,0 +1,77 @@
+.start {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    width: 1383px;
+    margin: -53px 37px;
+    border: solid 1px;
+    background: white;
+    background: #FFFFFF;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.15);
+    border-radius: 8px;
+}
+.focus {
+    box-shadow: 0 0 0 99999px rgba(0, 0, 0, .8) !important;
+    z-index: 1050 !important;
+    pointer-events:  auto !important;
+    transition: all 0.3s ease !important;
+    position: relative !important;
+}
+.textwrap{
+    display: flex;
+    flex-direction: row;
+    text-align: left;
+}
+.text{
+    margin: 19px 191px 10px 19px;
+    font-family: 'Rubik';
+    font-style: normal;
+    font-weight: 300;
+    font-size: 20px;
+    line-height: 18px;
+    color: #3C3C3C;
+}
+.text1{
+    margin: 19px 191px 10px -6px;
+    font-family: 'Rubik';
+    font-style: normal;
+    font-weight: 300;
+    font-size: 20px;
+    line-height: 18px;
+    color: #3C3C3C;
+}
+.text2{
+    margin: 19px 191px 10px 37px;
+    font-family: 'Rubik';
+    font-style: normal;
+    font-weight: 300;
+    font-size: 20px;
+    line-height: 18px;
+    color: #3C3C3C;
+}
+.text3{
+    margin: 19px 50px 10px ;
+    font-family: 'Rubik';
+    font-style: normal;
+    font-weight: 300;
+    font-size: 20px;
+    line-height: 18px;
+    color: #3C3C3C;
+}
+
+.optionwrap{
+    display: flex;
+    flex-direction: row;
+}
+
+.option {
+    margin: 10px 10px 34px 10px;
+    width: 275px;
+}
+.button1{
+    margin: -2px 20px 9px 30px;
+}
+.button{
+    margin: 10px 10px 20px 0px;
+    width: 142px;
+}

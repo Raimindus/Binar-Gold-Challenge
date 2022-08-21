@@ -4,26 +4,21 @@ import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import 'bootstrap/dist/css/bootstrap.min.css';
 import Landingpage from "./Landingpage";
+import Carsearchpage from './Carsearchpage'
+import {BrowserRouter, Routes, Route} from 'react-router-dom'
 
 function App() {
   return (
     <div className="App">
-      <Landingpage></Landingpage>
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <BrowserRouter>
+        <Routes>
+          <Route path='/' element={<Landingpage/>}/>
+          <Route path='/search' element={<Carsearchpage/>}/>
+        </Routes>
+      </BrowserRouter>
+      
     </div>
+
   );
 }
 

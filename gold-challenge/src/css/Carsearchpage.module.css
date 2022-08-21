@@ -1,0 +1,21 @@
+.wrapper1 {
+    max-width: 1440px;
+    max-height: 900px;
+    margin-left: auto;
+    margin-right: auto;
+    border: solid 0px;
+}
+.mobil1 {
+    margin: 8px 225px 0px 0px;
+    width: 477px;
+    z-index: 0 !important;
+}
+.info {
+    margin: 234px 14px 25px 36px;
+    font-family: 'Arial';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 20px;
+    color: #000000;
+}
