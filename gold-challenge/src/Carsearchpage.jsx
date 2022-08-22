@@ -6,15 +6,26 @@ import car from "./img/car.svg";
 import Footer from "./component/footer";
 import Form1 from "./component/form";
 import axios from "axios";
+import Cardetails from "./Cardetails";
 
 const Carsearchpage = () => {
   const [dataAPI, setDataAPI] = useState(null);
   useEffect(() => {
-    async function fetchData() {
-      const res = await axios.get(
-        "https://bootcamp-rent-car.herokuapp.com/admin/car"
-      );
-      setDataAPI(res.data);
+    function fetchData() {
+      axios
+        .get("https://bootcamp-rent-car.herokuapp.com/admin/car")
+        .then((res) => {
+          return res.data;
+        })
+        .then((res) => {
+          const filtered = res.filter(function (e) {
+            return e.image !== null;
+          });
+          return filtered;
+        })
+        .then((res) => {
+          setDataAPI(res);
+        });
     }
     fetchData();
   }, []);
@@ -45,6 +56,7 @@ const Carsearchpage = () => {
       <div class={style1.info}>
         <Footer />
       </div>
+      <Cardetails></Cardetails>
     </div>
   );
 };

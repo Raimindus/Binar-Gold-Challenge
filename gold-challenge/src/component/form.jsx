@@ -1,15 +1,15 @@
-import Form from "react-bootstrap/Form";
 import style from "../css/form.module.css";
 import Select from "react-select";
 import { useState } from "react";
-import { Button } from "react-bootstrap";
+import { Button, Row, Form } from "react-bootstrap";
+import CardA from "./cardA";
 
 function Form1({ dataAPI }) {
   const [kategori, setKategori] = useState(null);
   const [fokus, setFokus] = useState(false);
   const [nama, setNama] = useState("");
   const [harga, setHarga] = useState(null);
-  const [status, setStatus] = useState(null);
+  const [hasilsearch, setHasilsearch] = useState(null);
   const handleName = (e) => {
     setNama(e.target.value);
   };
@@ -39,31 +39,43 @@ function Form1({ dataAPI }) {
     },
     {
       value: "> 600000",
-      label: "< Rp. 400.000",
+      label: "> Rp. 600.000",
     },
   ];
 
-  const option3 = [
-    {
-      value: "True",
-      label: "True",
-    },
-    {
-      value: "False",
-      label: "False",
-    },
-  ];
   const handleSubmit = (e) => {
     e.preventDefault();
-    let hasil = dataAPI.filter(function (e) {
-      return (
-        e.name?.toLowerCase().includes(nama.toLowerCase()) &&
-        e.category?.includes(kategori) &&
-        e.price?.(harga) &&
-        e.status?.includes(status)
-      );
-    });
-    console.log(hasil);
+    if (harga === "< 400000") {
+      let hasil = dataAPI.filter(function (e) {
+        return (
+          e.name?.toLowerCase().includes(nama.toLowerCase()) &&
+          e.category?.includes(kategori) &&
+          e.price < 400000
+        );
+      });
+      console.log(hasilsearch);
+      setHasilsearch(hasil);
+    } else if (harga === "< 600000") {
+      let hasil = dataAPI.filter(function (e) {
+        return (
+          e.name?.toLowerCase().includes(nama.toLowerCase()) &&
+          e.category?.includes(kategori) &&
+          e.price < 600000
+        );
+      });
+      console.log(hasilsearch);
+      setHasilsearch(hasil);
+    } else if (harga === "> 600000") {
+      let hasil = dataAPI.filter(function (e) {
+        return (
+          e.name?.toLowerCase().includes(nama.toLowerCase()) &&
+          e.category?.includes(kategori) &&
+          e.price > 600000
+        );
+      });
+      console.log(hasilsearch);
+      setHasilsearch(hasil);
+    }
   };
   return (
     <div className={fokus ? style.focus : null}>
@@ -106,22 +118,24 @@ function Form1({ dataAPI }) {
             }}
           />
 
-          <Select
-            className={style.option}
-            options={option3}
-            placeholder="Disewa"
-            onChange={(e) => {
-              setStatus(e.value);
-              console.log(status);
-            }}
-          />
+          <Select className={style.option} placeholder="Disewa" />
           <div className={style.button1}>
-            <Button className={style.button} type="submit">
-              Cari Mobil
-            </Button>
+            {hasilsearch ? (
+              <Button className={style.button} type="submit">
+                Edit
+              </Button>
+            ) : (
+              <Button className={style.button} type="submit">
+                Cari Mobil
+              </Button>
+            )}
           </div>
         </div>
       </Form>
+      <Row>
+        {hasilsearch &&
+          hasilsearch.map((item) => <CardA key={item.id} item={item} />)}
+      </Row>
     </div>
   );
 }
