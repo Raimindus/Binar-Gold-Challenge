@@ -53,3 +53,14 @@
     border: solid 1px;
     background: #0D28A6;;
 }
+
+@media screen and (max-width: 360px){
+    .wrap{
+        display: flex;
+        flex-direction: column;
+    }
+    .nav1{
+        width: 120px;
+        margin: 10px 10px 20px -9px;
+    }
+}

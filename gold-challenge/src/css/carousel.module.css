@@ -43,3 +43,29 @@
     line-height: 20px;
     color: #000000;
 }
+
+@media screen and (max-width: 360px){
+    .wrapper{
+        flex-direction: column;
+        margin: 10px 10px 10px -354px;
+        width: 300px !important;
+    }
+    .wrapper2{
+        margin: 10px 10px 10px 10px;
+    }
+    .carousel1{
+        width: 246px;
+    }
+    .rate{
+        width: 196px;
+        margin-top: 10px;
+    }
+    .text1{
+        text-align: center;
+        width: 199px;
+    }
+    .text2{
+        text-align: center;
+        width: 199px;
+    }
+}

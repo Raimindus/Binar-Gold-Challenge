@@ -275,3 +275,77 @@
     text-align: left;
     flex: 1;
 }
+
+@media screen and (max-width: 360px){
+    .bg{
+        width: 360px;
+        background-color: #F1F3FF;
+        display: flex;
+        flex-direction: column;
+        flex: 1;
+    } 
+    .mobil1 {
+        margin-left: -174px;
+        margin-top: -69px;
+        height: 211px;
+        transform: matrix(1, 0, 0, 1, 0, 0);
+    }
+    .girl1{
+        margin-left: -18px;
+        margin-top: -20px;
+        height: 376px;
+        transform: matrix(1, 0, 0, 1, 0, 0);
+    }
+    .servicetext{
+        display: flex;
+        flex-direction: column;
+        margin: 307px 10px 10px -238px;
+        width: 347px;
+    }
+    .landinglist{
+        margin: 2px 10px 10px -41px;
+    }
+    .whytext1{
+        text-align: center;
+        justify-content: center;
+    }
+    .whytext2{
+        text-align: center;
+        justify-content: center;
+    }
+    .testi1{
+        margin: 30px 10px 10px 58px;
+        width: 266px;
+    } 
+    .added{
+        width: 320px;
+        margin: 10px 20px 10px 30px;
+    }
+    .addtext1{
+        width: 100px;
+        text-align: center;
+        margin: 10px 10px 10px 60px;
+    }
+    .addtext2{
+        width: 254px    ;
+        margin: 10px 10px 10px 30px;
+    }
+    .textwrap{
+        display: flex;
+        flex-direction: column;
+        width: 100px;
+    }
+    .asktext1{
+        margin: 10px 10px 10px -76px;
+        width: 382px;
+        text-align: center;
+    }
+    .asktext2{
+        margin: 10px 10px 10px -97px;
+        width: 335px;
+        text-align: center;
+    }
+    .accord{ 
+        margin: 90px 10px 10px 10px;
+    }
+}

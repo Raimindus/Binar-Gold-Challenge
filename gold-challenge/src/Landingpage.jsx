@@ -54,7 +54,7 @@ const Landingpage = () => {
               kualitas pelayanan terbaik untuk perjalanan wisata, bisnis,
               wedding, meeting, dll.
             </p>
-            <ol>
+            <ol className={style.landinglist}>
               <div className={style.image}>
                 <FontAwesomeIcon icon={faCircleCheck} />
                 <ul className={style.servicetext3}>

@@ -12,3 +12,9 @@
     line-height: 20px;
     color: #000000;
 }
+
+@media screen and (max-width: 360px){
+    .wrapper1{
+        width: 360px;
+    }
+}
